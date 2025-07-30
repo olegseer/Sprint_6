@@ -7,7 +7,8 @@ class MainPageLocators:
     scooter_btn = [By.XPATH, '//img[@alt="Scooter"]']  # кнопка Самокат
     order_btn_top = [By.XPATH, '//button[@class="Button_Button__ra12g"]']  # кнопка заказа самоката сверху
     order_btn_bottom = [By.XPATH, '//button[contains(@class, "Button_Button__ra12g Button_Middle__1CSJM")]']  # кнопка заказа самоката внизу
-    questions = {1: [By.ID, 'accordion__heading-0'],
+    faq_div = [By.XPATH, '//div[@class="Home_FAQ__3uVm4"]']  # раздел с вопросами
+    questions = {1: [By.XPATH, '//div[@id="accordion__heading-0"]/parent::div'],
                  2: [By.ID, 'accordion__heading-1'],
                  3: [By.ID, 'accordion__heading-2'],
                  4: [By.ID, 'accordion__heading-3'],
