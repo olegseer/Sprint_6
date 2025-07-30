@@ -1,5 +1,6 @@
 class TestData:
     main_url = 'https://qa-scooter.praktikum-services.ru/'
+    dzen_url = 'https://dzen.ru/?yredirect=true'
     test_data_question_answer = [
         [1, 'Сутки — 400 рублей. Оплата курьеру — наличными или картой.'],
         [2, 'Пока что у нас так: один заказ — один самокат. Если хотите покататься с друзьями, можете просто сделать несколько заказов — один за другим.'],

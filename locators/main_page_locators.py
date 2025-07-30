@@ -7,7 +7,9 @@ class MainPageLocators:
     scooter_btn = [By.XPATH, '//img[@alt="Scooter"]']  # кнопка Самокат
     order_btn_top = [By.XPATH, '//button[@class="Button_Button__ra12g"]']  # кнопка заказа самоката сверху
     order_btn_bottom = [By.XPATH, '//button[contains(@class, "Button_Button__ra12g Button_Middle__1CSJM")]']  # кнопка заказа самоката внизу
+    home_header = [By.XPATH, '//div[contains(@class, "Home_Header")]']  # заголовок на главной странице
     faq_div = [By.XPATH, '//div[@class="Home_FAQ__3uVm4"]']  # раздел с вопросами
+    dzen_div = [By.XPATH, '//*[@id="YA_SEARCH_APP_CONTAINER_MicroRoot"]/div']
     questions = {1: [By.XPATH, '//div[@id="accordion__heading-0"]/parent::div'],
                  2: [By.ID, 'accordion__heading-1'],
                  3: [By.ID, 'accordion__heading-2'],
