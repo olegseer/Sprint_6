@@ -1,10 +1,15 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
+from locators.main_page_locators import MainPageLocators
+
 
 class BasePage:
     def __init__(self, driver):
         self.driver = driver
+
+    def click_cookie_button(self):
+        self.driver.find_element(*MainPageLocators.cookie_btn).click()
 
     def click_on_element(self, locator):
         self.driver.find_element(*locator).click()
@@ -15,3 +20,6 @@ class BasePage:
 
     def wait_visibility_of_element(self, locator):
         WebDriverWait(self.driver, 3).until(ec.visibility_of_element_located(locator))
+
+    def wait_element_stay_clickable(self, locator):
+        WebDriverWait(self.driver, 3).until(ec.element_to_be_clickable(locator))

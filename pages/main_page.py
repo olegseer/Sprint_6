@@ -9,8 +9,7 @@ from pages.base_page import BasePage
 
 class MainPage(BasePage):
 
-    def click_cookie_button(self):
-        self.driver.find_element(*MainPageLocators.cookie_btn).click()
+
 
     def scroll_to_list(self):
         self.driver.execute_script("arguments[0].scrollIntoView();", self.driver.find_element(*MainPageLocators.faq_div))
