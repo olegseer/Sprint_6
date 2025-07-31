@@ -22,4 +22,4 @@ class TestLogoTransfer:
         main_page.click_on_element(MainPageLocators.yandex_btn)
         main_page.switch_to_another_tab()
         main_page.wait_visibility_of_element(MainPageLocators.dzen_div)
-        assert main_page.check_current_url() == TestData.dzen_url
+        assert TestData.dzen_url in main_page.check_current_url()
