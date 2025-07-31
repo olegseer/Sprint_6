@@ -1,11 +1,9 @@
+from data import TestData
 from locators.main_page_locators import MainPageLocators
 from pages.main_page import MainPage
-from data import TestData
 
 
 class TestLogoTransfer:
-
-    driver = None
 
     def test_logo_transfer_to_main_page(self, driver):
         main_page = MainPage(driver)

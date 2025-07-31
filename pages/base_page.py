@@ -1,6 +1,5 @@
 from selenium.webdriver.support.wait import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
-
 from locators.main_page_locators import MainPageLocators
 
 
@@ -20,6 +19,3 @@ class BasePage:
 
     def wait_visibility_of_element(self, locator):
         WebDriverWait(self.driver, 3).until(ec.visibility_of_element_located(locator))
-
-    def wait_element_stay_clickable(self, locator):
-        WebDriverWait(self.driver, 3).until(ec.element_to_be_clickable(locator))

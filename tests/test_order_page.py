@@ -2,7 +2,6 @@ import pytest
 
 from data import TestData
 from locators.main_page_locators import MainPageLocators
-from locators.order_page_locators import OrderPageLocators
 from pages.order_page import OrderPage
 
 
@@ -18,5 +17,4 @@ class TestOrderPage:
         order_page.click_on_element(button)
         order_page.filling_first_form(test_data)
         order_page.filling_second_form(test_data)
-        assert order_page.check_success_order()
-
+        assert order_page.check_success_order_text()

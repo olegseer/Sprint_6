@@ -10,7 +10,7 @@ class MainPageLocators:
     home_header = [By.XPATH, '//div[contains(@class, "Home_Header")]']  # заголовок на главной странице
     faq_div = [By.XPATH, '//div[@class="Home_FAQ__3uVm4"]']  # раздел с вопросами
     dzen_div = [By.XPATH, '//*[@id="YA_SEARCH_APP_CONTAINER_MicroRoot"]/div']
-    questions = {1: [By.XPATH, '//div[@id="accordion__heading-0"]/parent::div'],
+    questions = {1: [By.ID, 'accordion__heading-0'],  # вопросы
                  2: [By.ID, 'accordion__heading-1'],
                  3: [By.ID, 'accordion__heading-2'],
                  4: [By.ID, 'accordion__heading-3'],
@@ -18,7 +18,7 @@ class MainPageLocators:
                  6: [By.ID, 'accordion__heading-5'],
                  7: [By.ID, 'accordion__heading-6'],
                  8: [By.ID, 'accordion__heading-7']}
-    answers = {1: [By.XPATH, '//div[@id="accordion__panel-0"]'],
+    answers = {1: [By.XPATH, '//div[@id="accordion__panel-0"]'],  # ответы
                2: [By.XPATH, '//div[@id="accordion__panel-1"]'],
                3: [By.XPATH, '//div[@id="accordion__panel-2"]'],
                4: [By.XPATH, '//div[@id="accordion__panel-3"]'],
