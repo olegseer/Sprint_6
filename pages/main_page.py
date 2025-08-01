@@ -1,6 +1,4 @@
 import allure
-from selenium.webdriver.support.wait import WebDriverWait
-from selenium.webdriver.support import expected_conditions as ec
 from locators.main_page_locators import MainPageLocators
 from pages.base_page import BasePage
 
@@ -53,5 +51,3 @@ class MainPage(BasePage):
     @allure.step("Получить текст ответа")
     def get_text_of_answer(self, question_number):
         return self.get_text_of_element(MainPageLocators.answers[question_number])
-
-
