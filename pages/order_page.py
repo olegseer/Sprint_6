@@ -31,4 +31,4 @@ class OrderPage(BasePage):
 
     @allure.step("Проверка отображения текста об успешном бронировании")
     def check_success_order_text(self):
-        return self.driver.find_element(*OrderPageLocators.success_order_text).is_displayed()
+        return self.check_displaying_of_element(OrderPageLocators.success_order_text)
