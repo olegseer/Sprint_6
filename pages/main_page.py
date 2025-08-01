@@ -38,16 +38,20 @@ class MainPage(BasePage):
     def wait_visibility_of_dzen(self):
         self.wait_visibility_of_element(MainPageLocators.dzen_div)
 
+    @allure.step("Скролл до раздела вопрос-ответ")
+    def scroll_to_drop_list(self):
+        self.scroll_to_element(MainPageLocators.faq_div)
+
     @allure.step("Клик на вопрос из списка")
     def click_on_question(self, question_number):
-        self.driver.find_element(*MainPageLocators.questions[question_number]).click()
+        self.click_on_element(MainPageLocators.questions[question_number])
 
     @allure.step("Ожидание видимости ответа")
     def wait_visibility_of_answer(self, question_number):
-        WebDriverWait(self.driver, 3).until(ec.visibility_of_element_located(MainPageLocators.answers[question_number]))
+        self.wait_visibility_of_element(MainPageLocators.answers[question_number])
 
     @allure.step("Получить текст ответа")
     def get_text_of_answer(self, question_number):
-        return self.driver.find_element(*MainPageLocators.answers[question_number]).text
+        return self.get_text_of_element(MainPageLocators.answers[question_number])
 
 
