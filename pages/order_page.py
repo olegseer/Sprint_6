@@ -5,10 +5,6 @@ from pages.base_page import BasePage
 
 class OrderPage(BasePage):
 
-    @allure.step("Заполнить поле")
-    def send_keys_to_input(self, locator, keys):
-        self.driver.find_element(*locator).send_keys(keys)
-
     @allure.step("Заполнение первой половины формы")
     def filling_first_form(self, test_data):
         self.wait_visibility_of_element(OrderPageLocators.name)

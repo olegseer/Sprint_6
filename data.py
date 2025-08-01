@@ -2,10 +2,6 @@ from locators.order_page_locators import OrderPageLocators
 
 
 class TestData:
-    # ссылки
-    main_url = 'https://qa-scooter.praktikum-services.ru/'  # главная страница Самоката
-    dzen_url = 'https://dzen.ru/'  # главная страница Дзен
-
     # тестовые данные для формы бронирования
     test_data_user_1 = ["Габриэль", "Гарсиа", "Колумбия", "Сокольники", "89998887766", "03.08.2025",
                         OrderPageLocators.grey_scooter, OrderPageLocators.rent_time_one_day,

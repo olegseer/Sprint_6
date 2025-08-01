@@ -1,11 +1,11 @@
 import pytest
 from selenium import webdriver
-from data import TestData
+from curl import Urls
 
 
 @pytest.fixture
 def driver():
     driver = webdriver.Firefox()
-    driver.get(TestData.main_url)
+    driver.get(Urls.main_url)
     yield driver
     driver.quit()
